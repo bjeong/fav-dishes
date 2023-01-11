@@ -1,0 +1,2 @@
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file .config/npm/node_global/lib/node_modules/express/node_modules/.bin/mime","time":"2023-01-11T19:03:01Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/mime","time":"2023-01-11T19:03:02Z"}

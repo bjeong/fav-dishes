@@ -1,0 +1,418 @@
+@font-face{
+  font-family: 'Libre Franklin';
+  src: url("../font/LibreFranklin-Light.ttf") format("truetype"),
+  url("../font/LibreFranklin-Medium.ttf") format("truetype"),
+  url("../font/LibreFranklin-Regular.ttf") format("truetype"),
+  url("../font/LibreFranklin-SemiBold.ttf") format("truetype"),
+  url("../font/LibreFranklin-Bold.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: 'Roadgeek';
+  src: url("../font/Roadgeek 2000 SeriesD.TTF") format("truetype"),
+  url("../font/Roadgeek Transport Heavy.ttf") format("truetype"),
+  url("../font/Roadgeek Transport Medium.ttf") format("truetype"),
+  url("../font/Roadgeek2000EM.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: 'Muli';
+  src: url("../font/Muli.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: 'HindMadurai';
+  src: url("../font/HindMadurai-Regular.ttf") format("truetype");
+}
+
+html, body {
+  height: 100%;
+  width: 100%; 
+  margin: 0;
+  background: #faeed8;
+
+}
+
+html, body,  button, input, textarea{
+/*   font-family: quiche-text,sans-serif;  */
+  font-weight: 400;  
+  font-style: normal;
+}
+
+.title {
+  color: #4c6480;
+  font-family: 'Roadgeek';
+  font-style: normal;
+  font-weight: bold;
+  display: flex;
+}
+
+.info {
+  color: #373435;
+  font-family: 'Muli';
+}
+
+#page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+
+h1, h2, h3 { 
+  
+  font-weight: 700;  
+  font-style: normal;
+  text-align: left;
+} 
+
+header{
+ margin: 0 auto; 
+ text-align: center;
+  justify-content: center;
+}
+
+header h1 {
+  font-size: 3rem; 
+  text-align: center;
+  justify-content:center;
+  
+}
+
+button{
+ border: 0; 
+  font-weight: 700;  
+  background-color: #4c6480;  
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+} 
+
+header .actions{
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.actions .sort span{
+  font-weight: 700;
+  
+}
+
+.actions. sort {
+  justify-content: center;
+  display: flex;
+}
+
+footer {
+  text-align: center;
+  padding: 3rem;
+}
+
+h1 svg{   
+  width: 3.5rem;
+  margin-bottom: -1rem;
+}
+
+
+#content{  
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 3rem;
+  min-height: 3rem;
+  min-width: 3rem;
+  background-image: url('/load.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 2rem;
+  
+}
+
+/* Image Styling */
+
+.titleIcon{
+  padding-left: -5%;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restaurantIcon{
+  max-height: 80px;
+  
+  padding-right: 30px;
+}
+
+.locationIcon{
+
+  max-height: 20px;
+  padding-right: 5px;
+}
+
+.homeIcon{
+  max-height: 20px;
+}
+
+/* text styling*/
+.restaurant{
+  font-family: "HindMadurai";
+  font-style: normal;
+  
+  
+}
+
+
+/* CSS for Favorites Cards */
+.fav{
+  border-radius: 1rem; 
+
+  display:flex;
+  overflow: hidden;
+  flex-direction: column;
+  width: 100%;
+  filter: drop-shadow(.5rem .5rem 1rem #878787);
+}
+
+.fav section{
+  display:flex;
+  flex-direction: column;
+  
+}
+.fav .image {
+  height: 5rem; 
+  width: auto;
+  background-size: cover;
+  background-position: center center;
+  text-align: right;
+}
+
+.fav .image a img{
+  width: 2rem;
+  margin: 1rem;
+  opacity: 0.5;
+}
+.fav .image a:hover img{
+  opacity: 1;
+}
+@media (min-width: 500px) {
+  .fav {
+    flex-direction: row;
+    width: auto;
+  }
+  .fav .image{
+    width: 25rem; 
+    height: auto;
+  }
+  .fav p.description{
+    max-width: 25rem;
+    
+  }
+}
+
+
+.fav header{
+  display: flex;
+  background: #cfb288;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: .3rem;
+  
+  justify-content: space-between;
+  margin: 0;
+}
+.fav main{ 
+  background:  #cfb288;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  font-family: 'Muli';
+}
+.fav .basicInfo{
+  flex-grow: 1;
+}
+
+.fav h2.name{
+   color: #373435;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: "Muli";
+  font-style: normal;
+}
+.fav svg{
+  height: 1em;
+  width: 1em;
+  margin-bottom: -0.5rem;
+  
+}
+.fav h3{
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #373435;
+  font-style:normal;
+}
+.fav .stats{
+  display: flex;
+  gap: 2rem;
+
+}
+.stats .stat{
+
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.stats h3{
+     color: #373435;
+  font-size: 2rem;
+   margin-bottom: 1.5rem;
+  font-family: "Muli";
+  font-style: normal;
+  margin: 0;
+
+} 
+meter{
+ 
+  
+  height: 2rem;
+  width: 5rem;
+}
+
+
+
+/* the "badge" shows whether or not the favorite is vegan or not. */
+.badges{
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.badge{  
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Vegetarian-mark.svg/16px-Vegetarian-mark.svg.png);
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border-radius: 1rem; 
+ 
+}
+.success{
+  background-color: #4ab551;
+  color: white;
+}
+.alert{
+  background-color: #a2a1a0; 
+
+}
+
+.fav .options{
+  /* center the edit and delete buttons */
+  text-align: center;
+}
+/*====================*/
+
+/* Form Layout */
+#favForm{
+  margin: 0 5vw;
+  max-width: 60rem;
+  max-height: 40rem;
+  display: none;
+  flex-wrap:wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem; 
+  background: #84acd2;
+  padding: 2rem;
+  border-radius: 1rem;
+  filter: drop-shadow(0 0 1rem #ccc);
+  font-family: 'Muli';
+  border-style: double;
+  
+}
+/* drag and drop state */
+#favForm.ready{
+  background: #f8e99b;
+}
+#favForm h2{
+  width: 100%;
+  text-align: center;
+}
+#favForm fieldset{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: .5px;
+}
+/* Layout is a bit different for checkboxes and range sliders. */
+#favForm fieldset.checkboxElement{
+  flex-direction: row;
+  align-items: center;
+
+}
+#favForm fieldset.rangeElement{
+  justify-content: center;  
+}
+
+
+/* file upload */
+#favForm fieldset.fileElement{
+  justify-content: center;  
+  align-items: center;
+}
+
+#favForm fieldset.fileElement input{
+  display: none;
+}
+#favForm fieldset.fileElement label[for="uploader"]{
+   border: 0; 
+  font-weight: 700;  
+  background-color: #4c6480;  
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+#favForm fieldset.fileElement label[for="picture"] img{
+  width: 1.2rem;
+}
+#favForm fieldset.fileElement label[for="picture"] span{
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+#favForm fieldset.fileElement .separator{
+ 
+  margin: 1rem;
+}
+
+
+#favForm fieldset.filePreview img{
+   width: 8rem;
+}
+
+
+/* Styling for form elements */
+#favForm input {
+  padding: 0.5rem 1rem;
+}
+#favForm input[type="range"] {
+  padding: 0.5rem 0rem;
+}
+#favForm input#color {
+  padding: 0;
+}
+#favForm textarea{
+  padding: 1rem;
+}
+#favForm select{ 
+  padding: 0.5rem 1rem;
+}
+#favForm option  {
+  color: black;
+}
+#favForm option span{ 
+  padding: 0.5rem 1rem;
+}
+/* force the buttons to appear on their own line. */
+#favForm .lineBreak{
+  width: 100%;
+}
